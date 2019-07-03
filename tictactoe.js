@@ -203,8 +203,8 @@ const SYMBOLS = {
   
       function htmlQ1(){
         return `<div id="view1"><h3>Choose a game\n</h3>
-        ${buttonHTML(1, "1player", "1 Player VS Computer")}
-        ${buttonHTML(1, "2players", "2 Players")}
+        ${buttonHTML(1, "1player", "Player -VS- Computer")}
+        ${buttonHTML(1, "2players", "2 Player Game")}
         </div>`
       }
   

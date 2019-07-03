@@ -203,13 +203,13 @@ const SYMBOLS = {
   
       function htmlQ1(){
         return `<div id="view1"><h3>Which do you prefer?\n</h3>
-        ${buttonHTML(1, "1player", "Man Against computer")}
-        ${buttonHTML(1, "2players", "Man Against Man")}
+        ${buttonHTML(1, "1player", "1 Player VS Computer")}
+        ${buttonHTML(1, "2players", "2 Players")}
         </div>`
       }
   
       function htmlQ2(){
-        const html2=`<div id="view2"><h3>${!state.players[1].isComputer? "Player 1, <br />" : ""}Which symbols would you like to use?</h3>
+        const html2=`<div id="view2"><h3>${!state.players[1].isComputer? "Player 1, <br />" : ""}Choose your character:</h3>
         ${buttonHTML(2, "X", "X")}
         ${buttonHTML(2, "O", "O")}`
         return html2
@@ -247,7 +247,7 @@ const SYMBOLS = {
         if(result !== RESULT.tie)
           resultText = getPlayerName(result) + " Won"
   
-        let htmlBefore = `<h3>${resultText} ${htmlSpaces(2)} Click to restart </h3> `
+        let htmlBefore = `<h3>${resultText} ${htmlSpaces(2)} Click anywhere on the board to restart </h3> `
         let board = state.game._gameBoard.reduce(function(acc,curr,rowIndex){
             return acc + `<div id="row${rowIndex}" class="row">${curr.map(
               (str,colIndex)=>
